@@ -30,5 +30,5 @@ ul.tasks li .status.open {
 
 ul.tasks li .status.complete {
     border: 2px solid #82cc78;
-    backgroun: #82cc78;
+    background: #82cc78;
 }
