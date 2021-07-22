@@ -27,6 +27,23 @@ define(['uiComponent', 'jquery'], function (Component, $) {
             });
 
             this.tasks(items);
+        },
+        deleteTask: function(taskId) {
+            var tasks = [];
+
+            if (this.tasks().length === 1) {
+                this.tasks([]);
+
+                return;
+            }
+
+            this.tasks().forEach(function(task) {
+                if (task.id !== taskId) {
+                    tasks.push(task);
+                }
+            });
+
+            this.tasks(tasks);
         }
     });
 });
